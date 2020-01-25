@@ -18,16 +18,18 @@
                   <%= link_to post_image_path(post_image.id) do %>
                      <i class="fa fa-map-marker"></i><%= post_image.shop_name %>
                   <% end %>
+                  <%= paginate @post_images, class: "paginate" %>
                   </h3>
                   <p><%= post_image.caption %></p>
                   <ul class="inline-meta">
-                    <li>By
-                      <%= post_image.user.name %>
+                     <li>By
+                       <%= post_image.user.name %>
                     </li>
                     <li>
-                    <a href="#">23 コメント</a>
-                    </li>
-                  </ul>
+                       <%= link_to "#{post_image.post_comments.count} コメント", post_image_path(post_image.id) %>
+                   </li>
+                 </ul>
+
                 </div>
               </div>
             </div>
