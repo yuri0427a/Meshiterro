@@ -11,7 +11,5 @@ resources :post_images, only: [:new, :create, :index, :show] do
 end
 
 resources :users, only: [:show]
-
-
-
+resources :users, only: [:show, :edit]
 end
