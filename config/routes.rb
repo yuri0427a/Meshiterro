@@ -10,6 +10,5 @@ resources :post_images, only: [:new, :create, :index, :show] do
     resource :post_comments, only: [:create, :destroy]
 end
 
-resources :users, only: [:show]
-resources :users, only: [:show, :edit]
+resources :users, only: [:show, :edit, :update]
 end
